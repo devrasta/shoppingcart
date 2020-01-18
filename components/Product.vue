@@ -1,5 +1,5 @@
 <template>
-    <div class="md:w-1/3 xl:w-1/4 p-6 flex flex-col">
+    <div class="md:w-1/3 xl:w-1/4 p-6 flex flex-col hover:shadow-lg">
             <div class="w-full img_container" v-bind:style="{ 'background-image': 'url(' + details.image + ')' }"></div>
             <div class="pt-3 flex items-center justify-between">
               <p class>{{ details.name }}</p>
