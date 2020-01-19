@@ -6,6 +6,7 @@
               <img 
                 src="/cart.svg" 
                 alt="ajouter au panier"
+                class="cursor-pointer"
                 width="30px"
                 @click.prevent="add(details)" />
             </div>

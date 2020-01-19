@@ -12,9 +12,13 @@ export default {
     },
   
     remove (state, productItem) {
-        state.cart = state.cart.filter((item) => {
-            return item !== productItem
-        })
+        // let newCart = state.cart.filter((item) => {
+        //     return item === productItem
+        // })
+        let productIndex = state.cart.indexOf(productItem)
+        console.log(productIndex)
+        state.cart.splice(productIndex, 1)
+        // return state.cart = newCart
     }
   }
   

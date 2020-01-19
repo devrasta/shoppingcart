@@ -8,14 +8,16 @@
             <table class="w-full mt-4">
                 <thead>
                     <tr>
-                        <th colspan="3" class="text-blue-200 text-left">articles</th>
-                        <th colspan="1" class="text-blue-200 text-right">prix</th>
+                        <th colspan="3" class="text-blue-200 text-left pl-5">Articles</th>
+                        <th colspan="1" class="text-blue-200 text-right">Prix</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody v-if="cart.length > 0">
                     <tr v-for="product in cart" :key="product.uuid">
                         <td colspan="3" class="text-left">
-                            <span @click.prevent="remove()">x</span>
+                            <span @click.prevent="remove(product)">
+                                <img src="/close.svg" width="15" alt="" class="inline mb-1 cursor-pointer">
+                            </span>
                             {{ product.name }}
                         </td>
                         <td colspan="1" class="text-right">{{ product.price }}</td>
@@ -106,7 +108,7 @@ button.cart{
         }
         tfoot{
             tr td{
-                padding-top: 1rem;
+                padding-top: 3rem;
                 font-size: .75rem;
                 .btn-pay{
                     @apply font-bold py-1 px-2 rounded bg-blue-700 text-white;
