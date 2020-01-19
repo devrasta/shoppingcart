@@ -29,6 +29,9 @@
                         <td colspan="1">
                             <button class="btn-pay float-right">
                                 payer
+                                <span class="price block">
+                                    € {{ total }}
+                                </span>
                             </button>
                         </td>
                     </tr>
@@ -67,7 +70,8 @@ export default {
     },
     computed: mapGetters({
         cart: 'cart/getCart',
-        count: 'cart/count'
+        count: 'cart/count',
+        total: 'cart/getTotal'
     }),
     methods: {
         ...mapMutations({

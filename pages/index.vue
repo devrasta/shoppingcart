@@ -13,9 +13,21 @@
           </div>
           <p>stack technique:</p>
           <div class="px-6 py-4">
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#nuxtjs</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#vuex</span>
-            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">#jest</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+              <a href="https://nuxtjs.org/">
+              #nuxtjs
+              </a>
+            </span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+              <a href="https://vuex.vuejs.org/">
+                #vuex
+              </a>
+            </span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+              <a href="https://jestjs.io/">
+                #jest
+              </a>
+            </span>
           </div>
         </div>
       </div>

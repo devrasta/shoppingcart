@@ -24,9 +24,6 @@ export default {
             required: true
         }
     },
-    mounted() {
-        // console.log(this.details)
-    },
     methods: {
         ...mapMutations({
             add: 'cart/add'
