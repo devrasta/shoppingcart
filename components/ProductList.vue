@@ -45,7 +45,6 @@ export default {
       await this.$axios.get('/products.json')
         .then((res) => {
           this.products = this.limit === null ? res.data : res.data
-          console.log(typeof res.data)
         })
     }
   }

@@ -8,16 +8,29 @@
             <table class="w-full mt-4">
                 <thead>
                     <tr>
-                        <th colspan="3" class="text-blue-200">articles</th>
-                        <th colspan="1" class="text-blue-200">prix</th>
+                        <th colspan="3" class="text-blue-200 text-left">articles</th>
+                        <th colspan="1" class="text-blue-200 text-right">prix</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td colspan="3">SNEAKERS EN TISSU DE VILLE</td>
-                        <td colspan="1">120</td>
+                    <tr v-for="product in cart" :key="product.uuid">
+                        <td colspan="3" class="text-left">
+                            <span @click.prevent="remove()">x</span>
+                            {{ product.name }}
+                        </td>
+                        <td colspan="1" class="text-right">{{ product.price }}</td>
                     </tr>
                 </tbody>
+                <tfoot>
+                    <tr class="pt-4">
+                        <td colspan="3" @click.prevent="isOpen = false" class="cursor-pointer"> &lt; Continuer le shopping</td>
+                        <td colspan="1">
+                            <button class="btn-pay float-right">
+                                payer
+                            </button>
+                        </td>
+                    </tr>
+                </tfoot>
             </table>
         </div>
         <!-- default button -->
@@ -36,18 +49,28 @@
                 <circle cx="17.5" cy="18.5" r="1.5" />
             </svg>
               
-            <span class="checkout--count rounded-full bg-red-500 text-white absolute">2</span>
+            <span v-if="count > 0" class="checkout--count rounded-full bg-red-500 text-white absolute">{{ count }}</span>
             <span>MON PANIER</span>
         </button>
     </div>
 </template>
 
 <script>
+import { mapMutations, mapGetters } from 'vuex'
 export default {
     data() {
         return{
             isOpen: false
         }
+    },
+    computed: mapGetters({
+        cart: 'cart/getCart',
+        count: 'cart/count'
+    }),
+    methods: {
+        ...mapMutations({
+            remove: 'cart/remove'
+        })
     }
 }
 </script>
@@ -71,7 +94,6 @@ button.cart{
     }
     table{
         tr{
-            th, td{ text-align: left;}
             td{
                 color: #FFF;
             }
@@ -80,6 +102,15 @@ button.cart{
             td{
                 font-size: .90rem;
                 text-transform: lowercase;
+            }
+        }
+        tfoot{
+            tr td{
+                padding-top: 1rem;
+                font-size: .75rem;
+                .btn-pay{
+                    @apply font-bold py-1 px-2 rounded bg-blue-700 text-white;
+                }
             }
         }
     }

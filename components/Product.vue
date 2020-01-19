@@ -6,13 +6,15 @@
               <img 
                 src="/cart.svg" 
                 alt="ajouter au panier"
-                width="30px" />
+                width="30px"
+                @click.prevent="add(details)" />
             </div>
             <p class="pt-1 text-gray-900">€{{ details.price }}</p>
     </div>
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
     props: {
         details: {
@@ -22,7 +24,12 @@ export default {
         }
     },
     mounted() {
-        console.log(this.details)
+        // console.log(this.details)
+    },
+    methods: {
+        ...mapMutations({
+            add: 'cart/add'
+        })
     }
 }
 </script>
