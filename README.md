@@ -16,5 +16,8 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+# run test command
+$ yarn test
 ```
 

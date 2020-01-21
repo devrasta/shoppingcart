@@ -52,7 +52,19 @@ describe('Cart component', () => {
     expect(wrapper.vm.isOpen).toBe(true)
   })
 
-  test('it should display product in cart')
-  
-  test('it should be able to remove product from cart')
+  test('it should match snapshot', () => {
+    expect(wrapper.exists()).toBe(true)
+    expect(wrapper.vm.$el).toMatchSnapshot()
+  })
+
+  test('it should display product in cart', () => {
+    expect(wrapper.vm.cart[0]).toEqual(article)
+  })
+
+  test('it should be able to remove product from cart', () => {
+    wrapper.find('button.remove_button').trigger('click')
+    setTimeout(() => {
+      expect(wrapper.find('.cart_container').isVisible()).toBe(false)
+    }, 200);
+  })
 })

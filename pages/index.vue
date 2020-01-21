@@ -56,7 +56,7 @@
                     width="40"
                     class="image-content lazy-load"
                     alt="Image showing the new LinkedIn “in” bug (English language)."
-                    srcset="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+                    srcset="/lkdn.svg"
                   />
                 </li>
               </ul>
@@ -69,8 +69,8 @@
 </template>
 
 <script>
-import Nav from "~/components/Nav";
-import ProductList from "~/components/ProductList";
+import Nav from "@/components/Nav";
+import ProductList from "@/components/ProductList";
 
 export default {
   components: {

@@ -24,8 +24,8 @@
 </template>
 
 <script>
-import Product from "~/components/Product";
-import Cart from "~/components/Cart";
+import Product from "@/components/Product";
+import Cart from "@/components/Cart";
 
 export default {
   components: {
@@ -42,9 +42,11 @@ export default {
   },
   methods: {
     async fetchProducts() {
-      await this.$axios.get('/products.json')
+      let vm = this
+      await vm.$axios.get('/products.json')
         .then((res) => {
-          this.products = res.data
+          vm.products = res.data
+          console.log(res)
         })
     }
   }

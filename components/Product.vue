@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         ...mapMutations({
-            add: 'cart/add'
+            add: 'add'
         })
     }
 }

@@ -12,10 +12,10 @@
                         <th colspan="1" class="text-blue-200 text-right">Prix</th>
                     </tr>
                 </thead>
-                <tbody v-if="cart.length > 0">
-                    <tr v-for="product in cart" :key="product.uuid">
+                <tbody v-show="cart.length > 0" class="cart_container">
+                    <tr v-for="product in cart" :key="product.uuid" class="product_line">
                         <td colspan="3" class="text-left">
-                            <span @click.prevent="remove(product)">
+                            <span @click.prevent="remove(product)" class="remove_button">
                                 <img src="/close.svg" width="15" alt="" class="inline mb-1 cursor-pointer">
                             </span>
                             {{ product.name }}
