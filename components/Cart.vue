@@ -44,6 +44,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
+                fill="4299e1"
                 viewBox="0 0 24 24"
                 class="fill-current w-4 h-4 mr-2"
             >
@@ -55,7 +56,7 @@
             </svg>
               
             <span v-if="count > 0" class="checkout--count rounded-full bg-red-500 text-white absolute">{{ count }}</span>
-            <span>MON PANIER</span>
+            <span class="text-blue-700">MON PANIER</span>
         </button>
     </div>
 </template>

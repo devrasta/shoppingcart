@@ -4,9 +4,9 @@
         class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-6 py-3"
       >
         <a
-              class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
+              class="text-blue-500 uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
               href="#"
-        >Store</a>
+        >Catalogue</a>
       </div>
       <section>
         <div class="container mx-auto pb-12">

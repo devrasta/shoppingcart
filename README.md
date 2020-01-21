@@ -1,5 +1,5 @@
 # shoppingcart
-just a simple shopping cart app. vuejs vuex typescript with tests with jest and vue-test utils
+just a simple shopping cart app. vuejs vuex with tests (jest and vue-test utils)
 
 ## Build Setup
 

@@ -9,7 +9,7 @@
           class="intro_text shadow-lg"
         >
           <div class="w-full bg-gray-500 mb-4">
-            <h1 class="text-black text-2xl my-4">Simple shopping cart</h1>
+            <h1 class="text-black text-2xl my-4 text-blue-800">Simple shopping cart</h1>
           </div>
           <p>stack technique:</p>
           <div class="px-6 py-4">
@@ -41,8 +41,10 @@
             <div class="px-3 md:px-0">
               <h3 class="font-bold text-blue-500">A propos</h3>
               <p
-                class="py-4"
-              >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.</p>
+                class="py-4 lowercase"
+              >
+              Une simple fausse SPA (Single page application) e-commerce basée sur Nuxtjs [vuejs] possédant des tests unitaires et fonctionnels sous Jest
+              </p>
             </div>
           </div>
           <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
