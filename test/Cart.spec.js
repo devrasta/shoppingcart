@@ -1,34 +1,58 @@
-import { shallowMount } from '@vue/test-utils'
+import { shallowMount, createLocalVue } from '@vue/test-utils'
+import Vuex from 'vuex'
 import Cart from '@/components/Cart.vue'
 
-describe('Cart component', () =>{
-    const wrapper = shallowMount(Cart, {
-        // Stubbing nuxt-links in the navbar
-        stubs: ["nuxt-link"],
-        mocks: {
-          "nuxt-Link": true,
-          // Mocking the $store context object
-          $store: {
-            state: {
-                cart: [],
-                totalPrice : 0
-            },
-          },
-          // Mocking the $route context object
-          $route: {
-            path: "mockedPath",
-          },
-        },    
+const localVue = createLocalVue()
+
+localVue.use(Vuex)
+
+describe('Cart component', () => {
+  let wrapper
+  let state
+  let store
+  let article
+  let mutations
+  let getters
+
+  beforeEach(() => {
+    article = {
+      "name": "casque audio",
+      "description": "Lorem ipsum dolor sit amet",
+        "price": "302.50",
+        "stock": "00",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+    }
+    state = {
+      cart: [article],
+      totalPrice : article.price
+    }
+
+    mutations = {
+      remove: jest.fn()
+    }
+
+    getters = {
+      getCart: () => state.cart,
+      getTotal: () => state.totalPrice,
+      count: () => 1
+    }
+
+    store = new Vuex.Store({
+      state,
+      mutations,
+      getters
     })
-    describe('Cart is displaying', () => {
-      test('is a Vue instance', () => {
-        expect(wrapper.isVueInstance()).toBeTruthy()
-      })
-    })
-    // features
-    describe("Cart as correct text", () => {
-        it("should display content", () => {
-          expect(wrapper.html()).toContain("Articles")
-        })
-    })
+    wrapper = shallowMount(Cart, { store, localVue })
+  })
+
+  test('it should display opened cart when clicked', () => {
+    expect(wrapper.vm.isOpen).toBe(false)
+    let button = wrapper.find('button.cart')
+    button.trigger('click')
+    expect(wrapper.vm.isOpen).toBe(true)
+  })
+
+  test('it should display product in cart')
+  
+  test('it should be able to remove product from cart')
 })

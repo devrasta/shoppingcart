@@ -70,13 +70,13 @@ export default {
         }
     },
     computed: mapGetters({
-        cart: 'cart/getCart',
-        count: 'cart/count',
-        total: 'cart/getTotal'
+        cart: 'getCart',
+        count: 'count',
+        total: 'getTotal'
     }),
     methods: {
         ...mapMutations({
-            remove: 'cart/remove'
+            remove: 'remove'
         })
     }
 }

@@ -44,7 +44,7 @@ export default {
     async fetchProducts() {
       await this.$axios.get('/products.json')
         .then((res) => {
-          this.products = this.limit === null ? res.data : res.data
+          this.products = res.data
         })
     }
   }
