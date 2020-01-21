@@ -46,7 +46,6 @@ export default {
       await vm.$axios.get('/products.json')
         .then((res) => {
           vm.products = res.data
-          console.log(res)
         })
     }
   }

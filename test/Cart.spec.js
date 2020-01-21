@@ -1,4 +1,4 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
+import { mount, createLocalVue } from '@vue/test-utils'
 import Vuex from 'vuex'
 import Cart from '@/components/Cart.vue'
 
@@ -42,7 +42,7 @@ describe('Cart component', () => {
       mutations,
       getters
     })
-    wrapper = shallowMount(Cart, { store, localVue })
+    wrapper = mount(Cart, { store, localVue })
   })
 
   test('it should display opened cart when clicked', () => {
@@ -62,9 +62,9 @@ describe('Cart component', () => {
   })
 
   test('it should be able to remove product from cart', () => {
-    wrapper.find('button.remove_button').trigger('click')
+    let remove = wrapper.find({ ref: 'remove' })
     setTimeout(() => {
-      expect(wrapper.find('.cart_container').isVisible()).toBe(false)
+      expect(wrapper.find({ ref: 'container' }).isVisible()).toBe(false)
     }, 200);
   })
 })
