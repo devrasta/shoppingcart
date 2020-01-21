@@ -3,6 +3,7 @@
     <Nav />
     <section
       class="hero w-full mx-auto bg-nordic-gray-light flex md:items-center bg-cover bg-right"
+      style="background-image: url('store.jpg');"
     >
       <div class="container mx-auto">
         <div
@@ -91,7 +92,6 @@ export default {
   margin: 0 auto;
   .hero {
   height: 32rem;
-  background-image: url("store.jpg");
   position: relative;
   z-index: 1;
 
