@@ -91,7 +91,7 @@ export default {
   margin: 0 auto;
   .hero {
   height: 32rem;
-  background-image: url("/store.jpg");
+  background-image: url("store.jpg");
   position: relative;
   z-index: 1;
 
