@@ -43,7 +43,7 @@ export default {
   methods: {
     async fetchProducts() {
       let vm = this
-      await vm.$axios.get('/products.json')
+      await vm.$axios.get('~/products.json')
         .then((res) => {
           vm.products = res.data
         })

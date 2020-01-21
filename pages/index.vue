@@ -56,7 +56,7 @@
                     width="40"
                     class="image-content lazy-load"
                     alt="Image showing the new LinkedIn “in” bug (English language)."
-                    srcset="/lkdn.svg"
+                    srcset="lkdn.svg"
                   />
                 </li>
               </ul>

@@ -4,7 +4,7 @@
             <div class="pt-3 flex items-center justify-between">
               <p class>{{ details.name }}</p>
               <img 
-                src="/cart.svg" 
+                src="cart.svg" 
                 alt="ajouter au panier"
                 class="cursor-pointer"
                 width="30px"

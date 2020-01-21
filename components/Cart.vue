@@ -16,7 +16,7 @@
                     <tr v-for="product in cart" :key="product.uuid" class="product_line">
                         <td colspan="3" class="text-left">
                             <span @click.prevent="remove(product)" ref="remove">
-                                <img src="/close.svg" width="15" alt="" class="inline mb-1 cursor-pointer">
+                                <img src="close.svg" width="15" alt="" class="inline mb-1 cursor-pointer">
                             </span>
                             {{ product.name }}
                         </td>
