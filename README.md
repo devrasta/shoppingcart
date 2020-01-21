@@ -14,10 +14,14 @@ $ yarn dev
 $ yarn build
 $ yarn start
 
-# generate static project
-$ yarn generate
+# generate static project for github pages
+$ yarn generate:gh-pages
 
 # run test command
 $ yarn test
 ```
+### coverage
+![Image of Coverage](https://devrasta.github.io/shoppingcart/coverage.png)
 
+Démo:
+https://devrasta.github.io/shoppingcart/
