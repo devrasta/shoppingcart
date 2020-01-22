@@ -1,8 +1,9 @@
 <template>
-    <div class="w-1/4 p-4 relative">
+    <div class="md:w-1/4 p-4 relative">
         <!-- checkout panel -->
         <div class="open-checkout bg-blue-400 px-4 py-5" v-if="isOpen">
-            <h2 class="text-white relative">MON PANIER
+            <h2 class="text-white relative">
+                <span>MON PANIER</span>
                 <button class="close" @click.prevent="isOpen = false">&times;</button>
             </h2>
             <table class="w-full mt-4">
@@ -56,7 +57,7 @@
             </svg>
               
             <span v-if="count > 0" class="checkout--count rounded-full bg-red-500 text-white absolute">{{ count }}</span>
-            <span class="text-blue-700">MON PANIER</span>
+            <span class="text-blue-700 checkout-text">MON PANIER</span>
         </button>
     </div>
 </template>
@@ -86,6 +87,14 @@ export default {
 button.cart{
     outline: 0;
     @apply bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center relative;
+    @media screen and (max-width: 480px) {
+        position: fixed;
+        bottom: 1rem;
+        right: 2rem;
+        .checkout-text{
+            display: none;
+        }
+      }
 }
 .open-checkout{
     h2{

@@ -121,7 +121,7 @@ export default {
         list-style-type: circle;
       }
       @media screen and (max-width: 840px) {
-        margin: auto;
+          margin: 10rem auto;
       }
     }
   }

@@ -20,8 +20,8 @@ $ yarn generate:gh-pages
 # run test command
 $ yarn test
 ```
-### coverage
+## coverage
 ![Image of Coverage](https://devrasta.github.io/shoppingcart/coverage.png)
 
-Démo:
+## Démo:
 https://devrasta.github.io/shoppingcart/
