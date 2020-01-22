@@ -121,10 +121,15 @@ export default {
         list-style-type: circle;
       }
       @media screen and (max-width: 840px) {
-          margin: 10rem auto;
+          margin: 10rem auto 0;
+          width: 280px;
       }
     }
   }
 }
+  @media screen and (max-width: 840px) {
+      max-width: 100vw;
+      overflow: hidden;
+  }
 }
 </style>
